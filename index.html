@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Oppivio</title>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="sidebar">
+      <h class="logo">Oppivio</h>
+
+      <ul class="activities">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="eating">Eating</option>
+              <option value="shopping">Shopping</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Cost</label>
+            <input class="form__input form__input--cost" placeholder="$" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Duration</label>
+            <input
+              class="form__input form__input--duration"
+              placeholder="min"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Meals</label>
+            <input
+              class="form__input form__input--meals"
+              placeholder="number"
+            />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label class="form__label">Items</label>
+            <input
+              class="form__input form__input--items"
+              placeholder="number"
+            />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+
+        <!-- <li class="activity activity--eating" data-id="1234567890">
+          <h2 class="activity__title">Eating on April 14</h2>
+          <div class="activity__details">
+            <span class="activity__icon">🍽️</span>
+            <span class="activity__value">2</span>
+            <span class="activity__unit">Meals</span>
+          </div>
+          <div class="activity__details">
+            <span class="activity__icon">💸</span>
+            <span class="activity__value">24</span>
+            <span class="activity__unit">$</span>
+          </div>
+          <div class="activity__details">
+            <span class="activity__icon">⏱</span>
+            <span class="activity__value">4.6</span>
+            <span class="activity__unit">min</span>
+          </div>
+          <div class="activity__details">
+            <span class="activity__icon">⏱</span>
+            <span class="activity__value">178</span>
+            <span class="activity__unit">min</span>
+          </div>
+        </li>
+
+        <li class="activity activity--shopping" data-id="1234567891">
+          <h2 class="activity__title">Shopping on April 5</h2>
+          <div class="activity__details">
+            <span class="activity__icon">🛒</span>
+            <span class="activity__value">8</span>
+            <span class="activity__unit">Items</span>
+          </div>
+          <div class="activity__details">
+            <span class="activity__icon">💸</span>
+            <span class="activity__value">95</span>
+            <span class="activity__unit">$</span>
+          </div>
+          <div class="activity__details">
+            <span class="activity__icon">⏱</span>
+            <span class="activity__value">16</span>
+            <span class="activity__unit">min</span>
+          </div>
+          <div class="activity__details">
+            <span class="activity__icon">⏱</span>
+            <span class="activity__value">223</span>
+            <span class="activity__unit">m</span>
+          </div>
+        </li> -->
+        <button class="delete-btn hidden">Delete All</button>
+      </ul>
+
+      <p class="instructions">
+        <span>Directions:</span> Click one time on the map to place the location of the
+        activity that happened using your mouse click, then the form will pop
+        up. Fill out the form and press the "ENTER" key on your keyboard to
+        submit the form and then you will notice a marker will pop up on the map
+        were the activity happened. In addition, as you click on the submitted
+        purple or yellow forms the map will move to it's related marker.
+      </p>
+    </div>
+  </body>
+</html>
